@@ -22,7 +22,8 @@ jobs:
             - v1-dependencies-{{ checksum "Gemfile.lock" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-      - run: docker-compose run web bundle install --jobs=4 --retry=3 --path vendor/bundle
+      - run: gem install bundler：2.0.2
+      - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
       - run: yarn install
       - save_cache:
           paths:
@@ -51,7 +52,8 @@ jobs:
             - v1-dependencies-{{ checksum "Gemfile.lock" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-      - run: docker-compose run web bundle install --jobs=4 --retry=3 --path vendor/bundle
+      - run: gem install bundler：2.0.2
+      - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
       - run: yarn install
       - save_cache:
           paths:
