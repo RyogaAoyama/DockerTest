@@ -32,7 +32,7 @@ jobs:
       # Rubocop
       - run:
           name: Rubocop
-          command: bundle exec rubocop
+          command: bundle exec rubocop -a
 
   rspec:
     docker:
