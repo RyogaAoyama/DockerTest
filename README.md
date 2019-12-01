@@ -1,24 +1,58 @@
-# README
+---
+description: Vue.js Rails Docker CircleCIを使った練習用のWebアプリです。
+---
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリ仕様
 
-Things you may want to cover:
+## 仕様
 
-* Ruby version
+### Todo機能
 
-* System dependencies
+* 登録機能
+* 完了機能
+* 削除機能
+* 編集機能
+* 完了数カウント機能
 
-* Configuration
+#### 登録機能
 
-* Database creation
+Todoを登録する
 
-* Database initialization
+登録ボタン押下でTodoリストが画面上に作成され、リストが編集できるようになる。
 
-* How to run the test suite
+編集中、リストの下にTodo追加ボタンとキャンセルボタンを表示する。
 
-* Services (job queues, cache servers, search engines, etc.)
+{% hint style="info" %}
+※追加とキャンセルの仕様は後述
+{% endhint %}
 
-* Deployment instructions
+また、編集中のリストに値が入った状態でリスト領域外クリック追加ボタンと同じ挙動をする。
 
-* ...
+値が入っていない状態で領域外をクリックするとキャンセルボタンと同じ挙動をする
+
+◼️追加ボタン
+
+Todoを登録する。
+
+値が入っていない場合は何も動作しない。
+
+◼️キャンセルボタン
+
+登録をキャンセルする。
+
+作成されたリストも削除する。
+
+値が入っている場合でも登録しない。
+
+◼️追加・キャンセルボタン共通
+
+追加またはキャンセルボタンを押下したら
+
+追加、キャンセルボタンを非表示にする。
+
+
+
+
+
+
+
